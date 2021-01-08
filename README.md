@@ -17,4 +17,4 @@ A productivity based python script to keep one away from social media distractio
 - STEP 2: Add a cron job: `* * * * * path_to_python_bin path_to_script.py -l websites` 
 
 **TODO**
-- [] Allow the user to pass the end time of day using CLI
+- [ ] Allow the user to pass the end time of day using CLI
