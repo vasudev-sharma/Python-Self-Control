@@ -13,6 +13,6 @@ A productivity based python script to keep one away from social media distractio
 
 **NOTE:-** You can set up a cron job only  in Linux / Mac operating system
 
-STEP 1: In terminal, type `crontab -e` # This will allow you add a cron job in vim editor
-STEP 2: Add a cron job: `* * * * * path_to_python_bin path_to_script.py -l websites 
+- STEP 1: In terminal, type `crontab -e` # This will allow you add a cron job in vim editor
+- STEP 2: Add a cron job: `* * * * * path_to_python_bin path_to_script.py -l websites 
 
