@@ -7,7 +7,7 @@ import argparse
 
 def self_control(list_sites):
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_name = os.path.join(dir_path, "test_log.log")
+    file_name = os.path.join(dir_path, "self_control_log.log")
 
 
     #logger to log the files
@@ -30,7 +30,7 @@ def self_control(list_sites):
 
 
     YYYY, MM, DD = endtime
-    HH = 17
+    HH = 19
     endtime = datetime(YYYY, MM, DD, HH)
     sites_to_block = list_sites.split(",")
     print(sites_to_block)
@@ -64,8 +64,8 @@ def self_control(list_sites):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-w', '--WEBSITES' required = True,
+    parser.add_argument('-w', '--WEBSITES', required = True,
                     help='Enter the site names separated by comma')
     args = parser.parse_args()
-
-    self_control(args.l)
+    print(args)
+    self_control(args.WEBSITES)
