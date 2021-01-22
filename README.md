@@ -9,7 +9,7 @@ A productivity based python script to keep one away from social media distractio
 
 `python script.py -w "twitter.com, youtube.com, facebook.com"`
 
-## If you wish to automate blocking the websites, set up a cron job:- 
+## (Optional) If you wish to automate blocking the websites, set up a cron job:- 
 
 **NOTE:-** You can set up a cron job only  in Linux / Mac operating system
 
