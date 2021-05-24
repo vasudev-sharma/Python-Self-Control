@@ -30,12 +30,15 @@ def self_control(list_sites):
 
 
     YYYY, MM, DD = endtime
-    HH = 19
+    HH = 0
+
+
     endtime = datetime(YYYY, MM, DD, HH)
-    sites_to_block = list_sites.split(",")
+    sites_to_block = list_sites.split(", ")
     print(sites_to_block)
 
-    #sites_to_block = ["youtube.com, www.youtube.com, facebook.com, www.facebook.com, gradcafe.com, www.gradcafe.com, voot.com, www.voot.com, twitter.com, www.twitter.com, gmail.com, www.gmail.com, yahoo.com, www.yahoo.com"]
+
+    #sites_to_block = ["youtube.com, www.youtube.com, facebook.com, www.facebook.com, gradcafe.com, www.gradcafe.com, voot.com, www.voot.com, twitter.com, www.twitter.com, gmail.com, www.gmail.com, yahoo.com, www.yahoo.com, linkedin.com, www.linkedin.com"]
   
     #The list of sites to block 
     print(sites_to_block)
@@ -46,7 +49,7 @@ def self_control(list_sites):
             for site_name in sites_to_block:
                 if site_name not in file_content:
                     file.write(redirect + " "+ site_name + "\n")
-            #print(file.read())
+            print(file.read())
         logger.info("SITES BLOCKED")
 
     else:
@@ -56,16 +59,18 @@ def self_control(list_sites):
                 if (redirect + " " + site_name + '\n') in file_content:
                     file_content.remove(redirect + " " + site_name + '\n')
             file.truncate(0)
+            file.seek(0)
             print(file_content)
             for content in file_content: 
+
                 file.write(content)  
             print(file.readlines())
         logger.info("SITES UNBLOCKED")  
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-w', '--WEBSITES', required = True,
-                    help='Enter the site names separated by comma')
+    parser.add_argument('-w', '--WEBSITES', required = False,
+                    help='Enter the site names separated by comma', default = "youtube.com, www.youtube.com, facebook.com, www.facebook.com, gradcafe.com, www.gradcafe.com, voot.com, www.voot.com, twitter.com, www.twitter.com, gmail.com, www.gmail.com, yahoo.com, www.yahoo.com, linkedin.com, www.linkedin.com, https://web.whatsapp.com/, web.whatsapp.com, discord.com, https://web.whatsapp.com")
     args = parser.parse_args()
     print(args)
     self_control(args.WEBSITES)
