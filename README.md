@@ -5,6 +5,7 @@ A productivity based python script to keep one away from social media distractio
 1. ` git clone https://github.com/vs74/Python-Self-Control.git`
 2. `cd Python-Self-Control`
 
+
 ## How to use?
 
 `python script.py -w "twitter.com, youtube.com, facebook.com"`
