@@ -30,12 +30,12 @@ def self_control(list_sites):
 
 
     YYYY, MM, DD = endtime
-    HH = 19
+    HH = 23
     endtime = datetime(YYYY, MM, DD, HH)
     sites_to_block = list_sites.split(",")
     print(sites_to_block)
 
-    #sites_to_block = ["youtube.com, www.youtube.com, facebook.com, www.facebook.com, gradcafe.com, www.gradcafe.com, voot.com, www.voot.com, twitter.com, www.twitter.com, gmail.com, www.gmail.com, yahoo.com, www.yahoo.com"]
+    #sites_to_block = ["youtube.com, www.youtube.com, facebook.com, www.facebook.com, gradcafe.com, www.gradcafe.com, voot.com, www.voot.com, twitter.com, www.twitter.com, gmail.com, www.gmail.com, yahoo.com, www.yahoo.com, likedin.com, www.linkedin.com"]
   
     #The list of sites to block 
     print(sites_to_block)
@@ -64,8 +64,9 @@ def self_control(list_sites):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-w', '--WEBSITES', required = True,
+    parser.add_argument('-w', '--websites', required = True,
                     help='Enter the site names separated by comma')
     args = parser.parse_args()
-    print(args)
     self_control(args.WEBSITES)
+
+
