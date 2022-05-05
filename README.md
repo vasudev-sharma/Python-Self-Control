@@ -2,7 +2,7 @@
 A productivity based python script to keep one away from social media distractions
 
 ## Install 
-1. ` git clone https://github.com/vs74/Python-Self-Control.git`
+1. ` git clone https://github.com/vasudev-sharma/Python-Self-Control.git`
 2. `cd Python-Self-Control`
 
 
